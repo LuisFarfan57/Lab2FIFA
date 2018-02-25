@@ -30,7 +30,7 @@ namespace Arboles
             Raiz = null;
         }
 
-        public void Insertar(T datos)
+        public void Insertar(T datos, Delegate delegado)
         {
             Nodo<T> nuevo = new Nodo<T>(datos);            
 
@@ -47,7 +47,7 @@ namespace Arboles
                 while (aux != null)
                 {
                     Padre = aux;
-                    if (nuevo.info.CompareTo(aux.info) == 1)
+                    if ((int)delegado.DynamicInvoke(nuevo.info, aux.info) == 1)
                     {
                         aux = aux.Derecha;
                         derecha = true;
@@ -108,35 +108,34 @@ namespace Arboles
                 }
                 VerAltura(aux.Derecha, nivel + 1);
             }
-        }
-
-        private void InOrden(Nodo<T> nAux)
+        }       
+        private void InOrden(Nodo<T> nAux, ref List<T> lista)
         {
             if (nAux != null)
             {
-                InOrden(nAux.Izquierda);
-                dt.Rows.Add(nAux.info, nAux->info.id);
-                InOrden(nAux.nderecha);
+                InOrden(nAux.Izquierda, ref lista);
+                lista.Add(nAux.info);
+                InOrden(nAux.Derecha, ref lista);
             }
         }
 
-        private void PostOrden(Nodo<T> nAux)
+        private void PostOrden(Nodo<T> nAux, ref List<T> lista)
         {
             if (nAux != null)
             {
-                InOrden(nAux.Izquierda);
-                InOrden(nAux.nderecha);
-                dt.Rows.Add(nAux.info, nAux->info.id);
+                InOrden(nAux.Izquierda, ref lista);
+                InOrden(nAux.Derecha, ref lista);
+                lista.Add(nAux.info);
             }
         }
 
-        private void PreOrden(Nodo<T> nAux)
+        private void PreOrden(Nodo<T> nAux, ref List<T> lista)
         {
             if (nAux != null)
             {
-                dt.Rows.Add(nAux->info.car, nAux->info.id);
-                InOrden(nAux.Izquierda);
-                InOrden(nAux.Derecha);
+                lista.Add(nAux.info);
+                InOrden(nAux.Izquierda, ref lista);
+                InOrden(nAux.Derecha, ref lista);
             }
         }
     }
