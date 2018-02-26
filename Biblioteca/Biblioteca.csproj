@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ArbolBB.cs" />
     <Compile Include="DoubleLinkedList.cs" />
+    <Compile Include="Nodo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

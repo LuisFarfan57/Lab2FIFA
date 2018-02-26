@@ -4,22 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListaBiblioteca
-{
-    public class Nodo<T>
-    {
-        public T info { get; set; }
-        public Nodo<T> siguiente { get; set; }
-        public Nodo<T> anterior { get; set; }
-
-        public Nodo(T Info)
-        {
-            info = Info;
-            siguiente = null;
-            anterior = null;
-        }        
-    }
-
+namespace Biblioteca
+{    
     public class ListaDoblementeEnlazada<T>
     {
         Nodo<T> Inicio;

@@ -4,22 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Arboles
-{    
-    public class Nodo<T>
-    {
-        public T info;
-        public Nodo<T> Izquierda;
-        public Nodo<T> Derecha;
-		
-		public Nodo(T datos)
-		{
-			info = datos;
-			Izquierda = null;
-			Derecha = null;
-		}
-    }
-
+namespace Biblioteca
+{        
     public class ArbolBB<T>
     {
         public Nodo<T> Raiz;
@@ -68,7 +54,21 @@ namespace Arboles
                     Padre.Izquierda = nuevo;
                 }                                
             }
-        }      
+        }
+
+        public Nodo<T> findWhere(Func<T, bool> delegado, T datos, Nodo<T> raiz)
+        {
+            if (raiz != null)
+            {
+                findWhere(delegado, datos, raiz.Izquierda);
+                if (delegado.Invoke(raiz.info))
+                {
+                    return raiz;
+                }                
+                findWhere(delegado, datos, raiz.Derecha);
+            }
+            
+        }
 
         public List<T> BuscarHojas()
         {
