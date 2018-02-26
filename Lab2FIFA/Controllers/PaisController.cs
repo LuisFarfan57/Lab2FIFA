@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab2FIFA.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,49 @@ namespace Lab2FIFA.Controllers
 {
     public class PaisController : Controller
     {
-        // GET: Pais
-        public ActionResult Index()
+        public ActionResult ElegirTipodeDato()
         {
             return View();
+        }
+
+        // POST: Jugador/ElegirLista
+        [HttpPost]
+        public ActionResult ElegirTipodeDato(string submitButton)
+        {
+            try
+            {
+                switch (submitButton)
+                {
+                    case "Texto":
+                        Data<int>.instance.tipoDato = 0;
+                        break;
+                    case "Entero":
+                        Data<int>.instance.tipoDato = 1;
+                        break;
+                    case "Pais":
+                        Data<int>.instance.tipoDato = 2;
+                        break;
+                }
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        // GET: Pais
+        
+
+        
+     
+        public ActionResult Index()
+        {
+            Pais country = new Pais();
+            List<Pais> lista = new List<Pais>();
+            country.Id = 1;
+            country.Name = "hola";
+            lista.Add(country);
+            return View(lista);
         }
 
         // GET: Pais/Details/5

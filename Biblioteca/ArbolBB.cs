@@ -67,6 +67,7 @@ namespace Biblioteca
                 }                
                 findWhere(delegado, datos, raiz.Derecha);
             }
+            return null;
             
         }
 

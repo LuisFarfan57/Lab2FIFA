@@ -16,7 +16,7 @@ namespace Lab2FIFA
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Pais", action = "ElegirTipodeDato", id = UrlParameter.Optional }
             );
         }
     }
