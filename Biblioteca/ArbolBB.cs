@@ -57,18 +57,19 @@ namespace Biblioteca
         }
 
         public Nodo<T> findWhere(Func<T, bool> delegado, T datos, Nodo<T> raiz, bool Encontrado)
-        {            
+        {
             if ((raiz != null)&&(!Encontrado))
             {
                 findWhere(delegado, datos, raiz.Izquierda, Encontrado);
                 if (delegado.Invoke(raiz.info))
                 {
                     Encontrado = true;
-                    return raiz;                    
+                    return raiz;
                 }                
                 findWhere(delegado, datos, raiz.Derecha, Encontrado);
             }
-
+            return null;
+            
             return null;
             
         }

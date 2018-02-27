@@ -1,0 +1,5 @@
+C:\Users\garya\Desktop\Lab2FIFA\Lab2FIFA\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\garya\Desktop\Lab2FIFA\Lab2FIFA\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\garya\Desktop\Lab2FIFA\Lab2FIFA\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\garya\Desktop\Lab2FIFA\Lab2FIFA\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\garya\Desktop\Lab2FIFA\Lab2FIFA\Biblioteca\obj\Debug\Biblioteca.pdb

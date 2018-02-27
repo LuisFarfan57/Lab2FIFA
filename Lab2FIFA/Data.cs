@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using ListaBiblioteca;
 
 namespace Lab2FIFA
 {
@@ -24,5 +23,6 @@ namespace Lab2FIFA
         }
 
         Biblioteca.ArbolBB<T> Arbol = new Biblioteca.ArbolBB<T>();
+        public int tipoDato;
     }
 }
