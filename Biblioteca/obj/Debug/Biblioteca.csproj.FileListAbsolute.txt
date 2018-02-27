@@ -3,3 +3,8 @@ C:\Users\garya\Desktop\Lab2FIFA\Lab2FIFA\Biblioteca\bin\Debug\Biblioteca.dll
 C:\Users\garya\Desktop\Lab2FIFA\Lab2FIFA\Biblioteca\bin\Debug\Biblioteca.pdb
 C:\Users\garya\Desktop\Lab2FIFA\Lab2FIFA\Biblioteca\obj\Debug\Biblioteca.dll
 C:\Users\garya\Desktop\Lab2FIFA\Lab2FIFA\Biblioteca\obj\Debug\Biblioteca.pdb
+E:\Luis Farfan\Desktop\Trabajos\URL\EstructuraDeDatos\Lab2FIFA\Biblioteca\bin\Debug\Biblioteca.dll
+E:\Luis Farfan\Desktop\Trabajos\URL\EstructuraDeDatos\Lab2FIFA\Biblioteca\bin\Debug\Biblioteca.pdb
+E:\Luis Farfan\Desktop\Trabajos\URL\EstructuraDeDatos\Lab2FIFA\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+E:\Luis Farfan\Desktop\Trabajos\URL\EstructuraDeDatos\Lab2FIFA\Biblioteca\obj\Debug\Biblioteca.dll
+E:\Luis Farfan\Desktop\Trabajos\URL\EstructuraDeDatos\Lab2FIFA\Biblioteca\obj\Debug\Biblioteca.pdb
